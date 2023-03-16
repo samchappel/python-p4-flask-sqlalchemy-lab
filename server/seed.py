@@ -7,6 +7,8 @@ from faker import Faker
 from app import app
 from models import db, Zookeeper, Animal, Enclosure
 
+# db.init_app(app)
+
 fake = Faker()
 
 with app.app_context():
@@ -47,4 +49,3 @@ with app.app_context():
 
     db.session.add_all(animals)
     db.session.commit()
-
